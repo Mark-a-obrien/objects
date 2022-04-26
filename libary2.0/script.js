@@ -122,6 +122,36 @@ function displayLibary() {
 }
 
 
+
+// Modal 
+// --------
+const form = document.querySelector(".modal-form");
+const addBookBtn = document.querySelector(".add-book");
+const close = document.querySelector(".close");
+
+addBookBtn.addEventListener("click", () => {
+    form.showModal();
+});
+
+close.addEventListener("click", () => {
+    form.close();
+});
+
+// closes the modal if background is clicked
+window.addEventListener("click",(event) => {
+
+    if (event.target.classList.value == "modal-form")
+        form.close();
+});
+
+
+
+
+
+
+
+
+
 const example = document.querySelector(".card");
 example.parentNode.removeChild(example);
 
